@@ -1,10 +1,10 @@
 Speed game
 
-#Json Messages
+# Json Messages
 
-##Client:
+## Client:
 
-###Connect
+### Connect
 ```
 {
 	"type": "connect",
@@ -12,7 +12,7 @@ Speed game
 }
 ```
 
-###Move
+### Move
 ```
 {
 	"type": "move",
@@ -22,9 +22,9 @@ Speed game
 ```
 
 
-##Server:
+## Server:
 
-###Card
+### Card
 ```
 {
 	"type": "card",
@@ -32,7 +32,7 @@ Speed game
 }
 ```
 
-###Chat
+### Chat
 ```
 {
 	"type": "chat",
@@ -40,7 +40,7 @@ Speed game
 }
 ```
 
-###Invalid
+### Invalid
 ```
 {
 	"type": "invalid",
@@ -48,7 +48,7 @@ Speed game
 }
 ```
 
-###MiddleCards, OpponentCards, PlayerCards
+### MiddleCards, OpponentCards, PlayerCards
 ```
 {
 	"type": "playerCards",
@@ -61,7 +61,7 @@ Speed game
 }
 ```
 
-###Start
+### Start
 ```
 {
 	"type": "start",
