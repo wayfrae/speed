@@ -1,6 +1,4 @@
-Speed game
-
-# Json Messages
+# Speed Json Messages
 
 ## Cards:
 
