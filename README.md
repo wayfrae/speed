@@ -56,6 +56,14 @@ For "to:"
 }
 ```
 
+### Game
+```
+{
+	"type": "game",
+	"message": "Congratulations, you won!"
+}
+```
+
 ### Invalid
 ```
 {
