@@ -24,10 +24,15 @@ b = back of card
 ```
 {
 	"type": "move",
-	"card": "3",
+	"card": 3,
 	"to": 0
 }
 ```
+
+For "card:"
+
+index of card in hand
+
 
 For "to:"
 
