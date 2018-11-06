@@ -31,9 +31,8 @@ b = back of card
 
 For "to:"
 
-0 = opponents cards<br/>
-1 = middle area<br/>
-2 = players cards
+0 = left pile<br/>
+1 = right pile
 
 
 ## Server:
