@@ -4,7 +4,10 @@ Speed game
 
 ## Cards:
 
+### Normal
 2-10, j, q, k , a
+
+### Extra
 b = back of card
 
 ## Client:
