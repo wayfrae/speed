@@ -2,6 +2,11 @@ Speed game
 
 # Json Messages
 
+## Cards:
+
+2-10, j, q, k , a
+b = back of card
+
 ## Client:
 
 ### Connect
@@ -20,6 +25,12 @@ Speed game
 	"to": 0
 }
 ```
+
+For "to:"
+
+0 = opponents cards
+1 = middle area
+2 = players cards
 
 
 ## Server:
