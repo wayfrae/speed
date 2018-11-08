@@ -1,8 +1,7 @@
 package com.cs3750;
 
 import java.io.IOException;
-import java.util.List;
-import java.util.Map;
+import java.util.HashSet;
 
 import javax.websocket.OnClose;
 import javax.websocket.OnError;
@@ -13,14 +12,18 @@ import javax.websocket.server.ServerEndpoint;
 
 @ServerEndpoint("/game")
 public class SpeedEndpoint {
+	private HashSet<Session> connections = new HashSet<Session>();
     
     @OnOpen
     public void onOpen(Session session) {
-        System.out.println("onOpen::" + session.getId());        
+        System.out.println("onOpen::" + session.getId());    
+        connections.add(session);
     }
+    
     @OnClose
     public void onClose(Session session) {
         System.out.println("onClose::" +  session.getId());
+        connections.remove(session);
     }
     
     @OnMessage
