@@ -46,11 +46,17 @@ Echo.connect = function(host) {
 Echo.initialize = function() {
 	var ep = ":20202";
 	
+//	if (window.location.protocol == "http") {
+//		console.log(window.location.host);
+//		Echo.connect("ws://" + window.location.host.replace(":8080", ep));
+//	} else {
+//		Echo.connect("wss://" + window.location.host.replace(":8080", ep));
+//	}
+	
 	if (window.location.protocol == "http") {
-		console.log(window.location.host);
-		Echo.connect("http://" + window.location.host.replace(":8080", ep));
+		Echo.connect("ws://" + window.location.host + "/speedTest");
 	} else {
-		Echo.connect("https://" + window.location.host.replace(":8080", ep));
+		Echo.connect("wss://" + window.location.host + "/speedTest");
 	}
 };
 
