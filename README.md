@@ -77,10 +77,10 @@ For "to:"
 {
 	"type": "playerCards",
 	"cards": [
-		"b",
-		"4",
-		"9",
-		"b"
+		{"card": "b"},
+		{"card": "3"},
+		{"card": "q"},
+		{"card": "b"}
 	]
 }
 ```
