@@ -18,6 +18,17 @@ public class MessageFactory {
 		return objBuilder.build().toString();
 	}
 	
+	public String getDrawMessage(DrawMessage drawMessage) {
+		return getDrawMessage();
+	}
+	
+	public String getDrawMessage() {
+		JsonObjectBuilder objBuilder = Json.createObjectBuilder();
+		objBuilder.add("type", "draw");
+		
+		return objBuilder.build().toString();
+	}
+	
 	public String getMoveMessage(MoveMessage moveMessage) {
 		return getMoveMessage(moveMessage.getFrom(), moveMessage.getTo());
 	}

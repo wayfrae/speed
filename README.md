@@ -18,6 +18,13 @@ b = back of card
 }
 ```
 
+### Draw:
+```
+{
+	"type": "draw"
+}
+```
+
 ### Move
 ```
 {
