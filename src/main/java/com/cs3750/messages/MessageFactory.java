@@ -18,22 +18,22 @@ public class MessageFactory {
 		return objBuilder.build().toString();
 	}
 	
-	public String getDrawMessage(DrawMessage drawMessage) {
+	public static String getDrawMessage(DrawMessage drawMessage) {
 		return getDrawMessage();
 	}
 	
-	public String getDrawMessage() {
+	public static String getDrawMessage() {
 		JsonObjectBuilder objBuilder = Json.createObjectBuilder();
 		objBuilder.add("type", "draw");
 		
 		return objBuilder.build().toString();
 	}
 	
-	public String getMoveMessage(MoveMessage moveMessage) {
+	public static String getMoveMessage(MoveMessage moveMessage) {
 		return getMoveMessage(moveMessage.getFrom(), moveMessage.getTo());
 	}
 	
-	public String getMoveMessage(int from, int to) {
+	public static String getMoveMessage(int from, int to) {
 		JsonObjectBuilder objBuilder = Json.createObjectBuilder();
 		objBuilder.add("type", "move");
 		objBuilder.add("from", from);
@@ -42,11 +42,11 @@ public class MessageFactory {
 		return objBuilder.build().toString();
 	}
 	
-	public String getCardMessage(CardMessage cardMessage) {
+	public static String getCardMessage(CardMessage cardMessage) {
 		return getCardMessage(cardMessage.getCard());
 	}
 	
-	public String getCardMessage(String card) {
+	public static String getCardMessage(String card) {
 		JsonObjectBuilder objBuilder = Json.createObjectBuilder();
 		objBuilder.add("type", "card");
 		objBuilder.add("card", card);
@@ -54,11 +54,11 @@ public class MessageFactory {
 		return objBuilder.build().toString();
 	}
 	
-	public String getChatMessage(ChatMessage chatMessage) {
+	public static String getChatMessage(ChatMessage chatMessage) {
 		return getChatMessage(chatMessage.getMessage(), chatMessage.getUsername());
 	}
 	
-	public String getChatMessage(String message, String username) {
+	public static String getChatMessage(String message, String username) {
 		JsonObjectBuilder objBuilder = Json.createObjectBuilder();
 		objBuilder.add("type", "chat");
 		objBuilder.add("username", username);
@@ -67,11 +67,11 @@ public class MessageFactory {
 		return objBuilder.build().toString();
 	}
 	
-	public String getGameMessage(GameMessage gameMessage) {
+	public static String getGameMessage(GameMessage gameMessage) {
 		return getGameMessage(gameMessage.getMessage());
 	}
 	
-	public String getGameMessage(String message) {
+	public static String getGameMessage(String message) {
 		JsonObjectBuilder objBuilder = Json.createObjectBuilder();
 		objBuilder.add("type", "game");
 		objBuilder.add("message", message);
@@ -79,11 +79,11 @@ public class MessageFactory {
 		return objBuilder.build().toString();
 	}
 	
-	public String getInvalidMessage(InvalidMessage invalidMessage) {
+	public static String getInvalidMessage(InvalidMessage invalidMessage) {
 		return getInvalidMessage(invalidMessage.getMessage());
 	}
 	
-	public String getInvalidMessage(String message) {
+	public static String getInvalidMessage(String message) {
 		JsonObjectBuilder objBuilder = Json.createObjectBuilder();
 		objBuilder.add("type", "invalid");
 		objBuilder.add("message", message);
@@ -95,7 +95,7 @@ public class MessageFactory {
 		return getMiddleCards(middleCards.getCards());
 	}
 	
-	public String getMiddleCards(String[] cards) {
+	public static String getMiddleCards(String[] cards) {
 		JsonObjectBuilder objBuilder = Json.createObjectBuilder();
 		objBuilder.add("type", "middle");
 		
@@ -110,11 +110,11 @@ public class MessageFactory {
 		return objBuilder.build().toString();
 	}
 	
-	public String getOpponentCards(OpponentCards opponentCards) {
+	public static String getOpponentCards(OpponentCards opponentCards) {
 		return getOpponentCards(opponentCards.getCards());
 	}
 	
-	public String getOpponentCards(int cards) {
+	public static String getOpponentCards(int cards) {
 		JsonObjectBuilder objBuilder = Json.createObjectBuilder();
 		objBuilder.add("type", "opponent");
 		objBuilder.add("cards", cards);
@@ -122,11 +122,11 @@ public class MessageFactory {
 		return objBuilder.build().toString();
 	}
 	
-	public String getPlayerCards(PlayerCards playerCards) {
+	public static String getPlayerCards(PlayerCards playerCards) {
 		return getPlayerCards(playerCards.getCards());
 	}
 	
-	public String getPlayerCards(String[] cards) {
+	public static String getPlayerCards(String[] cards) {
 		JsonObjectBuilder objBuilder = Json.createObjectBuilder();
 		objBuilder.add("type", "player");
 		
@@ -141,11 +141,11 @@ public class MessageFactory {
 		return objBuilder.build().toString();
 	}
 	
-	public String getStartMessage(StartMessage startMessage) {
+	public static String getStartMessage(StartMessage startMessage) {
 		return getStartMessage(startMessage.getUsername());
 	}
 	
-	public String getStartMessage(String username) {
+	public static String getStartMessage(String username) {
 		JsonObjectBuilder objBuilder = Json.createObjectBuilder();
 		objBuilder.add("type", "start");
 		objBuilder.add("username", username);
