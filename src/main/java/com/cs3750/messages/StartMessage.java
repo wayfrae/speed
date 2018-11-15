@@ -8,6 +8,10 @@ public class StartMessage extends Message {
 		this.username = username;
 	}
 	
+	public StartMessage() {
+		super("start");
+	}
+	
 	public String getUsername() {
 		return username;
 	}

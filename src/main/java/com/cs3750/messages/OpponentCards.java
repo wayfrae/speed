@@ -1,14 +1,16 @@
 package com.cs3750.messages;
 
+import java.util.List;
+
 public class OpponentCards extends Message {
-	private int cards;
+	private List<Integer> cards;
 	
-	public OpponentCards(int cards) {
+	public OpponentCards(List<Integer> cards) {
 		super("opponent");
 		this.cards = cards;
 	}
 	
-	public int getCards() {
+	public List<Integer> getCards() {
 		return cards;
 	}
 }

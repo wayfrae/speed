@@ -1,20 +1,21 @@
 package com.cs3750.messages;
 
 public class MoveMessage extends Message {
-	private int from;
-	private int to;
+	private Integer from;
+	private Integer to;
+	private String username;
 	
-	public MoveMessage(int from, int to) {
+	public MoveMessage(String username, Integer from, Integer to) {
 		super("move");
 		this.from = from;
 		this.to = to;
 	}
 	
-	public int getFrom() {
+	public Integer getFrom() {
 		return from;
 	}
 	
-	public int getTo() {
+	public Integer getTo() {
 		return to;
 	}
 }

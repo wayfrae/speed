@@ -1,14 +1,16 @@
 package com.cs3750.messages;
 
+import java.util.List;
+
 public class PlayerCards extends Message {
-	private String[] cards;
+	private List<Integer> cards;
 	
-	public PlayerCards(String[] cards) {
+	public PlayerCards(List<Integer> cards) {
 		super("player");
 		this.cards = cards;
 	}
 	
-	public String[] getCards() {
+	public List<Integer> getCards() {
 		return cards;
 	}
 }

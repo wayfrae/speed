@@ -1,14 +1,16 @@
 package com.cs3750.messages;
 
+import java.util.List;
+
 public class MiddleCards extends Message {
-	private String[] cards;
+	private List<Integer> cards;
 	
-	public MiddleCards(String[] cards) {
+	public MiddleCards(List<Integer> cards) {
 		super("middle");
 		this.cards = cards;
 	}
 	
-	public String[] getCards() {
+	public List<Integer> getCards() {
 		return cards;
 	}
 }

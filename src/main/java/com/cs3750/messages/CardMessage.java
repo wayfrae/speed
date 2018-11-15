@@ -1,14 +1,14 @@
 package com.cs3750.messages;
 
 public class CardMessage extends Message {
-	private String card;
+	private Integer card;
 	
-	public CardMessage(String card) {
+	public CardMessage(Integer card) {
 		super("card");
 		this.card = card;
 	}
 	
-	public String getCard() {
+	public Integer getCard() {
 		return card;
 	}
 }
