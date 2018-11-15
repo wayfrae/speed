@@ -19,6 +19,15 @@ public class ComplementHandCardsMessage extends Message {
 		this.playerOnSideCardNum = playerOnSideCardNum;
 	}
 
+	@Override
+	public String toString() {
+		return "ComplementHandCardsMessage [playerOnHandCards=" + playerOnHandCards + ", playerOnSideCardNum="
+				+ playerOnSideCardNum + ", type=" + type + ", username=" + username + ", getPlayerOnHandCards()="
+				+ getPlayerOnHandCards() + ", getPlayerOnSideCardNum()=" + getPlayerOnSideCardNum() + ", getType()="
+				+ getType() + ", getUsername()=" + getUsername() + ", getClass()=" + getClass() + ", hashCode()="
+				+ hashCode() + ", toString()=" + super.toString() + "]";
+	}
+
 	public List<Integer> getPlayerOnHandCards() {
 		return playerOnHandCards;
 	}

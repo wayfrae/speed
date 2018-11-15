@@ -28,6 +28,19 @@ public class ResultsMessage extends Message{
 		this.onSideB = onSideB;
 	}
 	
+	@Override
+	public String toString() {
+		return "ResultsMessage [isWin=" + isWin + ", isMoved=" + isMoved + ", isStuck=" + isStuck + ", middlesOld="
+				+ middlesOld + ", middlesCur=" + middlesCur + ", playerACards=" + playerACards + ", playerBCards="
+				+ playerBCards + ", onSideA=" + onSideA + ", onSideB=" + onSideB + ", type=" + type + ", username="
+				+ username + ", isWin()=" + isWin() + ", getMiddles()=" + getMiddles() + ", getPlayerACards()="
+				+ getPlayerACards() + ", getPlayerBCards()=" + getPlayerBCards() + ", getOnSideA()=" + getOnSideA()
+				+ ", getOnSideB()=" + getOnSideB() + ", isMoved()=" + isMoved() + ", isStuck()=" + isStuck()
+				+ ", getMiddlesAfter()=" + getMiddlesAfter() + ", getType()=" + getType() + ", getUsername()="
+				+ getUsername() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
+				+ super.toString() + "]";
+	}
+
 	public boolean isWin() {
 		return isWin;
 	}
