@@ -24,7 +24,7 @@ public class Dealer {
         playerTwoCards = new ArrayList<>();
 
         for (int i = 0; i < MIDDLE_LIMIT; i++) {
-            middleCur.set(i, this.deck.popDeck());
+            middleCur.add(this.deck.popDeck());
         }
         
         for (Card card: middleCur) {
@@ -53,8 +53,8 @@ public class Dealer {
         middleCur = new ArrayList<>();
         Card temp = this.playerA.popMiddleSide();
         if (temp != null) {
-            middleCur.set(0, temp);
-            middleCur.set(1, this.playerB.popMiddleSide());
+            middleCur.add(temp);
+            middleCur.add(this.playerB.popMiddleSide());
         }
     }
 
@@ -198,7 +198,6 @@ public class Dealer {
 
         Deck deck = new Deck(1);
         Dealer dealer = new Dealer(deck);
-        System.out.println(dealer.getMiddle());
         System.out.println(dealer.getPlayerA().getCardsOnHand());
         System.out.println(dealer.getPlayerB().getCardsOnHand());
         System.out.println(dealer.getPlayerA().getCardsOnMiddleSide());
@@ -209,7 +208,6 @@ public class Dealer {
         dealer.replaceMiddleCards();
         System.out.println(dealer.getPlayerA().getCardsOnMiddleSide());
         System.out.println(dealer.getPlayerB().getCardsOnMiddleSide());
-        System.out.println(dealer.getMiddle());
         dealer.replaceMiddleCards();
         dealer.getPlayerA().flipCardToOnHand();
     }
