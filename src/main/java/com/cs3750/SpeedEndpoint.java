@@ -1,7 +1,7 @@
 package com.cs3750;
 
 import java.io.IOException;
-import java.util.HashSet;
+import java.util.ArrayList;
 
 import javax.websocket.OnClose;
 import javax.websocket.OnError;
@@ -12,7 +12,7 @@ import javax.websocket.server.ServerEndpoint;
 
 @ServerEndpoint("/game")
 public class SpeedEndpoint {
-	private HashSet<Session> connections = new HashSet<Session>();
+	private ArrayList<Session> connections = new ArrayList<Session>();
     
     @OnOpen
     public void onOpen(Session session) {
