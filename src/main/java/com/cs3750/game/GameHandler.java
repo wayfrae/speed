@@ -31,12 +31,15 @@ public class GameHandler {
 			if (game.getDealer().getPlayerBName().equals("")) {
 				
 				return new InvalidMessage("Not enough players");
+			} else if (started) {
+				return new InvalidMessage("Already started");
 			} else {
 				started = true;
 				
 				return new StartMessage();
 			}
 		}
+		// StartMessage needs to contain cards info
 		
 		if (msg instanceof ConnectMessage) {
 			if (game == null) {
@@ -56,7 +59,9 @@ public class GameHandler {
 				
 				game.getDealer().setPlayerBName(((ConnectMessage) msg).getUsername());
 				
-				return new StartMessage();
+				started = true;
+				
+				return new StartMessage(cardIntConverter(game.getDealer().getPlayerA().getCardsOnHand()),cardIntConverter(game.getDealer().getPlayerB().getCardsOnHand()), cardIntConverter(game.getDealer().middleCur)));
 			
 			} else {
 				
@@ -146,7 +151,8 @@ public class GameHandler {
 
 	public static void main(String[] args) {
 		System.out.println(messageIn(new ConnectMessage("a")));
-//		System.out.println(messageIn(new ConnectMessage("a")));
+		System.out.println(GameHandler.getDealer().getPlayerAName());
+		System.out.println(messageIn(new ConnectMessage("a")));
 		System.out.println(messageIn(new ConnectMessage("b")));
 		System.out.println(messageIn(new StartMessage("a")));
 		System.out.println(messageIn(new MoveMessage("a", 2, 3)));
