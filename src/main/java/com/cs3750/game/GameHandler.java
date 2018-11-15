@@ -61,7 +61,7 @@ public class GameHandler {
 				
 				started = true;
 				
-				return new StartMessage(cardIntConverter(game.getDealer().getPlayerA().getCardsOnHand()),cardIntConverter(game.getDealer().getPlayerB().getCardsOnHand()), cardIntConverter(game.getDealer().middleCur)));
+				return new StartMessage(cardIntConverter(game.getDealer().getPlayerA().getCardsOnHand()),cardIntConverter(game.getDealer().getPlayerB().getCardsOnHand()), cardIntConverter(game.getDealer().getMiddleCur()));
 			
 			} else {
 				
@@ -154,7 +154,7 @@ public class GameHandler {
 		System.out.println(GameHandler.getDealer().getPlayerAName());
 		System.out.println(messageIn(new ConnectMessage("a")));
 		System.out.println(messageIn(new ConnectMessage("b")));
-		System.out.println(messageIn(new StartMessage("a")));
+		System.out.println(messageIn(new StartMessage()));
 		System.out.println(messageIn(new MoveMessage("a", 2, 3)));
 
 

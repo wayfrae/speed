@@ -49,10 +49,12 @@ public class StartMessage extends Message {
 
 	@Override
 	public String toString() {
-		return "StartMessage [username=" + username + ", type=" + type + ", getUsername()=" + getUsername()
-				+ ", getType()=" + getType() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-				+ ", toString()=" + super.toString() + "]";
+		return "StartMessage [playerAOnHand=" + playerAOnHand + ", playerBOnHand=" + playerBOnHand + ", middle="
+				+ middle + ", type=" + type + ", username=" + username + ", getUsername()=" + getUsername()
+				+ ", getPlayerAOnHand()=" + getPlayerAOnHand() + ", getPlayerBOnHand()=" + getPlayerBOnHand()
+				+ ", getMiddle()=" + getMiddle() + ", getType()=" + getType() + ", getClass()=" + getClass()
+				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
 	}
-	
+
 	
 }
