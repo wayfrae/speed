@@ -146,5 +146,11 @@ public class GameHandler {
 
 	public static void main(String[] args) {
 		System.out.println(messageIn(new ConnectMessage("a")));
+//		System.out.println(messageIn(new ConnectMessage("a")));
+		System.out.println(messageIn(new ConnectMessage("b")));
+		System.out.println(messageIn(new StartMessage("a")));
+		System.out.println(messageIn(new MoveMessage("a", 2, 3)));
+
+
 	}
 }
