@@ -1,5 +1,7 @@
 package com.cs3750.messages;
 
+import java.util.List;
+
 import javax.json.Json;
 import javax.json.JsonArrayBuilder;
 import javax.json.JsonObjectBuilder;
@@ -46,7 +48,7 @@ public class MessageFactory {
 		return getCardMessage(cardMessage.getCard());
 	}
 	
-	public static String getCardMessage(String card) {
+	public static String getCardMessage(int card) {
 		JsonObjectBuilder objBuilder = Json.createObjectBuilder();
 		objBuilder.add("type", "card");
 		objBuilder.add("card", card);
@@ -95,14 +97,14 @@ public class MessageFactory {
 		return getMiddleCards(middleCards.getCards());
 	}
 	
-	public static String getMiddleCards(String[] cards) {
+	public static String getMiddleCards(List<Integer> cards) {
 		JsonObjectBuilder objBuilder = Json.createObjectBuilder();
 		objBuilder.add("type", "middle");
 		
 		JsonArrayBuilder arrBuilder = Json.createArrayBuilder();
 		
-		for (String s : cards) {
-			arrBuilder.add(Json.createObjectBuilder().add("card", s));
+		for (int i : cards) {
+			arrBuilder.add(Json.createObjectBuilder().add("card", i));
 		}
 		
 		objBuilder.add("cards", arrBuilder);
@@ -114,10 +116,10 @@ public class MessageFactory {
 		return getOpponentCards(opponentCards.getCards());
 	}
 	
-	public static String getOpponentCards(int cards) {
+	public static String getOpponentCards(List<Integer> cards) {
 		JsonObjectBuilder objBuilder = Json.createObjectBuilder();
 		objBuilder.add("type", "opponent");
-		objBuilder.add("cards", cards);
+		objBuilder.add("cards", cards.size());
 		
 		return objBuilder.build().toString();
 	}
@@ -126,14 +128,14 @@ public class MessageFactory {
 		return getPlayerCards(playerCards.getCards());
 	}
 	
-	public static String getPlayerCards(String[] cards) {
+	public static String getPlayerCards(List<Integer> cards) {
 		JsonObjectBuilder objBuilder = Json.createObjectBuilder();
 		objBuilder.add("type", "player");
 		
 		JsonArrayBuilder arrBuilder = Json.createArrayBuilder();
 		
-		for (String s : cards) {
-			arrBuilder.add(Json.createObjectBuilder().add("card", s));
+		for (int i : cards) {
+			arrBuilder.add(Json.createObjectBuilder().add("card", i));
 		}
 		
 		objBuilder.add("cards", arrBuilder);

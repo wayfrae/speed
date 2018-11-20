@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class Deck {
 
-    private List<Card> deck = new ArrayList<>();
+    private List<Card> deck = new ArrayList<Card>();
     private int size;
 
     public Deck(int n) {

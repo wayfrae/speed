@@ -15,8 +15,8 @@ public class Player {
 
     public Player(List<Card> card) {
         this.cardsOnSide = card;
-        this.cardsOnHand = new ArrayList<>();
-        this.cardsOnMiddleSide = new Stack<>();
+        this.cardsOnHand = new ArrayList<Card>();
+        this.cardsOnMiddleSide = new Stack<Card>();
 
         for (int i = 0; i < ON_HAND_LIMIT; i++) {
             this.cardsOnHand.add(Deck.popCard(cardsOnSide));
