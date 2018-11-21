@@ -35,11 +35,8 @@ public class SpeedEndpoint {
     public void onMessage(String message, Session session) {
         System.out.println("onMessage::From=" + session.getId() + " Message=" + message);
         
-        Message incoming = getMessage(message);
-        
-        
         try {
-//            session.getBasicRemote().sendText("Hello Client " + session.getId() + "!");
+            session.getBasicRemote().sendText("Hello Client " + session.getId() + "!");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -48,42 +45,5 @@ public class SpeedEndpoint {
     @OnError
     public void onError(Throwable t) {
         System.out.println("onError::" + t.getMessage());
-    }
-    
-    private Message getMessage(String message) {
-    	JsonReader reader = Json.createReader(new StringReader(message));
-    	String type = reader.readObject().getString("type");
-    	
-    	if (type.equals("ack")) {
-    		
-    	} else if (type.equals("card")) {
-    		
-    	} else if (type.equals("chat")) {
-    		
-    	} else if (type.equals("complementHandCards")) {
-    		
-    	} else if (type.equals("connect")) {
-    		
-    	} else if (type.equals("draw")) {
-    		
-    	} else if (type.equals("game")) {
-    		
-    	} else if (type.equals("invalid")) {
-    		
-    	} else if (type.equals("move")) {
-    		
-    	} else if (type.equals("opponentCards")) {
-    		
-    	} else if (type.equals("playerCards")) {
-    		
-    	} else if (type.equals("result")) {
-    		
-    	} else if (type.equals("start")) {
-    		
-    	} else {
-    		// Probably throw error, since no other message exists
-    	}
-    	
-    	return null;
     }
 }
