@@ -1,4 +1,4 @@
-package com.cs3750.messages;
+package main.java.com.cs3750.messages;
 
 public class GameMessage extends Message {
 	@Override

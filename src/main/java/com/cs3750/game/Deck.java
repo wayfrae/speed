@@ -1,4 +1,4 @@
-package com.cs3750.game;
+package main.java.com.cs3750.game;
 
 import java.util.ArrayList;
 import java.util.List;

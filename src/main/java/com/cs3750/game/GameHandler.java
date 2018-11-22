@@ -1,17 +1,17 @@
-package com.cs3750.game;
+package main.java.com.cs3750.game;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.cs3750.game.Card.Ranking;
-import com.cs3750.messages.AckMessage;
-import com.cs3750.messages.ComplementHandCardsMessage;
-import com.cs3750.messages.ConnectMessage;
-import com.cs3750.messages.InvalidMessage;
-import com.cs3750.messages.Message;
-import com.cs3750.messages.MoveMessage;
-import com.cs3750.messages.ResultsMessage;
-import com.cs3750.messages.StartMessage;
+import main.java.com.cs3750.game.Card.Ranking;
+import main.java.com.cs3750.messages.AckMessage;
+import main.java.com.cs3750.messages.ComplementHandCardsMessage;
+import main.java.com.cs3750.messages.ConnectMessage;
+import main.java.com.cs3750.messages.InvalidMessage;
+import main.java.com.cs3750.messages.Message;
+import main.java.com.cs3750.messages.MoveMessage;
+import main.java.com.cs3750.messages.ResultsMessage;
+import main.java.com.cs3750.messages.StartMessage;
 
 public class GameHandler {
 	
@@ -125,7 +125,7 @@ public class GameHandler {
 
 	public static List<Integer> cardIntConverter(List<Card> cards) {
 		
-		List<Integer> nums = new ArrayList<>();
+		List<Integer> nums = new ArrayList<Integer>();
 		for (Card card:cards) {
 			nums.add(card.getRanking().getValue());
 		}

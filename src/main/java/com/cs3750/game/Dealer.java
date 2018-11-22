@@ -1,16 +1,16 @@
-package com.cs3750.game;
+package main.java.com.cs3750.game;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import com.cs3750.game.Card.Ranking;
+import main.java.com.cs3750.game.Card.Ranking;
 
 public class Dealer {
 
     public static int MIDDLE_LIMIT = 2;
-    List<Card> middleCur = new ArrayList<>();
-    List<Card> middleOld = new ArrayList<>();
+    List<Card> middleCur = new ArrayList<Card>();
+    List<Card> middleOld = new ArrayList<Card>();
     List<Card> playerOneCards, playerTwoCards;
     Deck deck;
     Player playerA, playerB;
@@ -20,8 +20,8 @@ public class Dealer {
         this.deck = deck;
         Deck.shuffle(this.deck);
 
-        playerOneCards = new ArrayList<>();
-        playerTwoCards = new ArrayList<>();
+        playerOneCards = new ArrayList<Card>();
+        playerTwoCards = new ArrayList<Card>();
 
         for (int i = 0; i < MIDDLE_LIMIT; i++) {
             middleCur.add(this.deck.popDeck());
@@ -50,7 +50,7 @@ public class Dealer {
     }
 
     public void replaceMiddleCards() {
-        middleCur = new ArrayList<>();
+        middleCur = new ArrayList<Card>();
         Card temp = this.playerA.popMiddleSide();
         if (temp != null) {
             middleCur.add(temp);

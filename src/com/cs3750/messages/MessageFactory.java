@@ -199,7 +199,7 @@ public class MessageFactory {
     	} else if (type.equals("result")) {
     		
     	} else if (type.equals("start")) {
-    		
+    		return new StartMessage(reader.readObject().getString("message"));
     	} else {
     		// Probably throw error, since no other message exists
     	}

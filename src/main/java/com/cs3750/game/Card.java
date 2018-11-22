@@ -1,4 +1,4 @@
-package com.cs3750.game;
+package main.java.com.cs3750.game;
 
 public class Card {
     public enum Suit {HEART, SPADE, DIAMOND, CLUB}
